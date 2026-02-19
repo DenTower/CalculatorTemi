@@ -21,10 +21,16 @@ class CalculatorViewModel: ViewModel() {
     }
 
     private fun enterOperation(operation: CalculatorOperation) {
-        if(state.number1.isNotBlank()) {
+
+        if (state.number1.isNotBlank() && state.number2.isNotBlank()) {
+            calculate()
+        }
+
+        if (state.number1.isNotBlank()) {
             state = state.copy(operation = operation)
         }
     }
+
 
     private fun calculate() {
         val number1 = state.number1.toDoubleOrNull()
