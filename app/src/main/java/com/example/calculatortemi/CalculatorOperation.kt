@@ -1,5 +1,6 @@
 package com.example.calculatortemi
 
+// класс - перечисление операций калькулятора
 sealed class CalculatorOperation(val symbol: String) {
     object Add: CalculatorOperation("+")
     object Subtract: CalculatorOperation("-")

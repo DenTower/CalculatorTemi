@@ -1,5 +1,6 @@
 package com.example.calculatortemi
 
+// класс - перечисление действий калькулятора
 sealed class CalculatorAction {
     data class Number(val number: Int): CalculatorAction()
     object Clear: CalculatorAction()
